@@ -290,8 +290,8 @@
     };
 
     hardtime = {
-      enable = false;
-      enabled = false;
+      enable = true;
+      enabled = true;
       disabledFiletypes = [ "Oil" ];
       hint = true;
       maxCount = 4;
