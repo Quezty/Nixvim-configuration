@@ -15,3 +15,6 @@ To test your configuration simply run the following command
 ```sh
 nix run .
 ```
+
+
+^ This configuration is made from an already existing conf. I will add the link to their repo later
