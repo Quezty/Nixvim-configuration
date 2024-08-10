@@ -170,7 +170,7 @@
     };
 
     # Easily toggle comments
-    commentary.enable = true;
+    comment.enable = true;
 
     # Terminal inside Neovim
     toggleterm = {
