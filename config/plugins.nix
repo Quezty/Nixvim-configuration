@@ -351,6 +351,10 @@
           installRustc = true;
           installCargo = true;
         };
+
+        hls = {
+          enable = true;
+        };
       };
     };
 
