@@ -20,7 +20,11 @@
       enable = true;
     };
 
+    # Enables tmux-navigator for using vim binds in tmux or wezterm
     tmux-navigator.enable = true;
+
+    # Showing neovim on discord as activity
+    neocord.enable = true;
 
     # Auto-tagging
     ts-autotag = {
