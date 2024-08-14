@@ -1,20 +1,3 @@
-<h2 align="center">Nixvim</h2>
+<h1 align="center">Quezty's Nixvim Configuration!</h1>
 
-> This repository contains my Neovim configuration, which is declaratively written in Nix.
-
-**Configuring/editting**
-
-To start configuring, just add or modify the Nix files in `./config`.
-
-If you add a new configuration file, remember to add it to the [`config/default.nix`](./config/default.nix) file
-
-**Testing your new configuration**
-
-To test your configuration simply run the following command
-
-```sh
-nix run .
-```
-
-
-^ This configuration is made from an already existing conf. I will add the link to their repo later
+### This is my version of an already existing config of [nixvim](https://github.com/nix-community/nixvim). The config was taken from [this](https://github.com/ahwxorg/nixvim-config) repo.
