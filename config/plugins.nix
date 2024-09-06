@@ -274,6 +274,7 @@
       enabled = true;
       disabledFiletypes = [ "Oil" ];
       hint = false;
+      notification = false;
       maxCount = 4;
       maxTime = 1000;
       restrictionMode = "hint";
