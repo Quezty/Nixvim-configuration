@@ -98,9 +98,6 @@
       topDown = true;
     };
 
-    # Persistence
-    persistence.enable = true;
-
     # Debugger
     dap = {
       enable = true;
@@ -250,30 +247,6 @@
       };
     };
 
-    # File tree
-    neo-tree = {
-      enable = true;
-      enableDiagnostics = true;
-      enableGitStatus = true;
-      enableModifiedMarkers = true;
-      enableRefreshOnWrite = true;
-      closeIfLastWindow = true;
-      popupBorderStyle = "rounded"; # Type: null or one of “NC”, “double”, “none”, “rounded”, “shadow”, “single”, “solid” or raw lua code
-      buffers = {
-        bindToCwd = false;
-        followCurrentFile = {
-          enabled = true;
-        };
-      };
-      window = {
-        width = 40;
-        height = 15;
-        autoExpandWidth = false;
-        mappings = {
-          "<space>" = "none";
-        };
-      };
-    };
 
     undotree = {
       enable = true;
@@ -300,7 +273,7 @@
       enable = true;
       enabled = true;
       disabledFiletypes = [ "Oil" ];
-      hint = true;
+      hint = false;
       maxCount = 4;
       maxTime = 1000;
       restrictionMode = "hint";
@@ -370,10 +343,6 @@
       enable = true;
       theme = "dashboard";
       iconsEnabled = true;
-    };
-
-    cmp-emoji = {
-      enable = true;
     };
 
     cmp = {
@@ -450,12 +419,6 @@
         maxwidth = 50;
         ellipsis_char = "...";
       };
-    };
-
-    schemastore = {
-      enable = true;
-      yaml.enable = true;
-      json.enable = false;
     };
 
     fidget = {
