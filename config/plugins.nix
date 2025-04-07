@@ -586,7 +586,7 @@
   -- }
        })  '';
 
-  colorschemes.catpuccin = {
+  colorschemes.catppuccin = {
     enable = true;
     settings = {
       flavour = "latte";
