@@ -586,8 +586,9 @@
   -- }
        })  '';
 
-  colorschemes.rose-pine = {
+  colorschemes.nightfox = {
     enable = true;
+    flavor = "duskfox";
     settings = {
       no_bold = false;
       no_italic = false;
