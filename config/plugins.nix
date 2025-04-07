@@ -586,10 +586,10 @@
   -- }
        })  '';
 
-  colorschemes.nightfox = {
+  colorschemes.catpuccin = {
     enable = true;
-    flavor = "duskfox";
     settings = {
+      flavour = "latte";
       no_bold = false;
       no_italic = false;
       no_underline = false;
