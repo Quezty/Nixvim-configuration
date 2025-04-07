@@ -589,7 +589,7 @@
   colorschemes.catppuccin = {
     enable = true;
     settings = {
-      flavour = "latte";
+      flavour = "macchiato";
       no_bold = false;
       no_italic = false;
       no_underline = false;
