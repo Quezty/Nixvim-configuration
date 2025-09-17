@@ -121,6 +121,22 @@
 
     {
       mode = "n";
+      key = "<leader>ba";
+      action = "<cmd>%bd<cr>";
+      options = {
+        desc = "Delete all buffers";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<leader>bs";
+      action = "<cmd>lua AddBashShebang()<CR>";
+      options.desc = "AddPythonShebang";
+    }
+
+    {
+      mode = "n";
       key = "<leader>tn";
       action = "<cmd>FloatermNew<cr>";
       options = {
@@ -135,4 +151,11 @@
     }
 
   ];
+  extraConfigLua = ''
+       function AddBashShebang()
+         if vim.bo.filetype == 'sh' or vim.bo.filetype == 'bash' then
+           vim.api.nvim_buf_set_lines(0, 0, 0, false, { '#!/usr/bin/env bash' })
+         end
+       end
+  '';
 }

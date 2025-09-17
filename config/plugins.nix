@@ -8,9 +8,8 @@
     # Status bar
     lualine = {
       enable = true;
-    };
+    };    # Make `nvim .` look prettier
 
-    # Make `nvim .` look prettier
     oil = {
       enable = true;
     };
@@ -586,7 +585,7 @@
   -- }
        })  '';
 
-  colorschemes.catppuccin = {
+  colorschemes.cyberdream = {
     enable = true;
     settings = {
       flavour = "macchiato";
