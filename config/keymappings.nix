@@ -128,11 +128,20 @@
       };
     }
 
+    # AddBashShebang
     {
       mode = "n";
       key = "<leader>bs";
       action = "<cmd>lua AddBashShebang()<CR>";
-      options.desc = "AddPythonShebang";
+      options.desc = "AddBashShebang";
+    }
+
+    # ToggleLinesAndDiagnostics
+    {
+      mode = "n";
+      key = "<leader>ld";
+      action = "<cmd>lua ToggleLinesAndDiagnostics()<CR>";
+      options.desc = "Toggle Lines And Diagnostics";
     }
 
     {
@@ -152,10 +161,34 @@
 
   ];
   extraConfigLua = ''
-       function AddBashShebang()
-         if vim.bo.filetype == 'sh' or vim.bo.filetype == 'bash' then
-           vim.api.nvim_buf_set_lines(0, 0, 0, false, { '#!/usr/bin/env bash' })
-         end
-       end
+function AddBashShebang()
+  if vim.bo.filetype == 'sh' or vim.bo.filetype == 'bash' then
+    vim.api.nvim_buf_set_lines(0, 0, 0, false, { '#!/usr/bin/env bash' })
+  end
+end
+
+function ToggleLinesAndDiagnostics()
+  if vim.g._lines_and_diagnostics_visible == nil then
+    vim.g._lines_and_diagnostics_visible = true
+  end
+
+  if vim.g._lines_and_diagnostics_visible then
+    -- Hide line numbers and diagnostics
+    vim.diagnostic.hide()
+    vim.opt.number = false
+    vim.opt.relativenumber = false
+    vim.notify("Line numbers and diagnostics hidden", "info")
+  else
+    -- Show line numbers and diagnostics
+    vim.diagnostic.show()
+    vim.opt.number = true
+    vim.opt.relativenumber = true
+    vim.notify("Line numbers and diagnostics shown", "info")
+  end
+
+  vim.g._lines_and_diagnostics_visible = not vim.g._lines_and_diagnostics_visible
+end
+
+
   '';
 }
