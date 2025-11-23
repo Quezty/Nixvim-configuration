@@ -585,7 +585,7 @@
   -- }
        })  '';
 
-  colorschemes.cyberdream = {
+  colorschemes.rose-pine = {
     enable = true;
     settings = {
       flavour = "macchiato";
